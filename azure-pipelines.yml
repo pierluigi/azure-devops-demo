@@ -9,8 +9,8 @@ trigger:
     - master
   paths:
     include:
-    - *.js
-
+    - ./*.js
+    
 pool:
   vmImage: 'Ubuntu-16.04'
 
