@@ -21,5 +21,5 @@ steps:
 
 - script: |
     npm install
-    npm run build
-  displayName: 'npm install and fail'
+    npm run test
+  displayName: 'npm install and test for master'
