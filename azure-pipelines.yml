@@ -4,9 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-  branches:
-    include:
-    - master
+  batch: true
   paths:
     include:
     - ./*.js
