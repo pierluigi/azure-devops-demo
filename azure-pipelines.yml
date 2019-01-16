@@ -4,7 +4,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-  batch: true
   paths:
     include:
     - ./*.js
@@ -12,13 +11,30 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install Node.js'
+jobs:
+- job: Merge
+  condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run test
-  displayName: 'npm install and test'
+  - script: |
+      npm install
+      npm run test
+      npm run build
+    displayName: 'npm install and test'
+
+- job: PR
+  condition: ne(variables['build.sourceBranch'], 'refs/heads/master')
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '8.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+      npm run test
+    displayName: 'npm install and test'
