@@ -7,12 +7,11 @@ trigger:
   paths:
     include:
     - ./*.js
-    
-pool:
-  vmImage: 'Ubuntu-16.04'
 
 jobs:
 - job: Merge
+  pool:
+    vmImage: 'Ubuntu-16.04'
   condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
   steps:
   - task: NodeTool@0
@@ -27,6 +26,8 @@ jobs:
     displayName: 'npm install and test'
 
 - job: PR
+  pool:
+    vmImage: 'Ubuntu-16.04'
   condition: ne(variables['build.sourceBranch'], 'refs/heads/master')
   steps:
   - task: NodeTool@0
