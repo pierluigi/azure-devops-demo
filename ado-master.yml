@@ -4,10 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-  - master
+  branches:
+    - master
   paths:
     include:
     - ./*.js
+
+pr: none
 
 pool:
   vmImage: 'Ubuntu-16.04'
