@@ -5,7 +5,7 @@
 
 trigger:
   branches:
-    exclude:
+    include:
     - master
   paths:
     include:
@@ -24,4 +24,4 @@ steps:
     npm install
     npm run test
     npm run build
-displayName: 'npm install and test and fail'
+  displayName: 'npm install and test and fail'
