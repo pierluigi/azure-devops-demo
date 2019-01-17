@@ -2,3 +2,9 @@
 
 # azure-devops-demo
 Basic Node App built with Azure DevOps for demos
+
+
+# Deployment slots
+- Production (via manual approval): https://pierluigi.azurewebsites.net/
+- Preview (post merge): https://pierluigi-preview.azurewebsites.net/
+- Staging (for PRs): https://pierluigi-staging.azurewebsites.net/
