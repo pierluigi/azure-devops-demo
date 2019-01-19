@@ -23,6 +23,7 @@ steps:
     npm install
     npm run lint
     npm run test
+    CODECOV_TOKEN=$(CODECOVE_TOKEN) npm run report-coverage
   displayName: 'npm install, test, and lint'
     
 - task: ArchiveFiles@2
