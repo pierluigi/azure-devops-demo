@@ -30,7 +30,7 @@ steps:
   displayName: 'npm install and lint'
 
 - script: |
-    npm run test
+    npm test
     CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
   displayName: 'test and upload coverage'
 

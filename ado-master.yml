@@ -22,7 +22,7 @@ steps:
 - script: |
     npm install
     npm run lint
-    npm run test
+    npm test
     CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
   displayName: 'npm install, test, and lint'
     
