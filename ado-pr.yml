@@ -14,7 +14,6 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -27,8 +26,13 @@ steps:
 
 - script: |
     npm install
+    npm run lint
+  displayName: 'npm install and lint'
+
+- script: |
     npm run test
-  displayName: 'npm install and test'
+    CODECOV_TOKEN=$(CODECOVE_TOKEN) npm run report-coverage
+  displayName: 'test and upload coverage'
 
 - task: ArchiveFiles@2
   inputs:

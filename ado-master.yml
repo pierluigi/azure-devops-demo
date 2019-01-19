@@ -21,8 +21,9 @@ steps:
 
 - script: |
     npm install
-    npm run test
-  displayName: 'npm install and test for master'
+    npm lint
+    npm test
+  displayName: 'npm install, test, and lint'
     
 - task: ArchiveFiles@2
   inputs:

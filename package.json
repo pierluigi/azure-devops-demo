@@ -7,9 +7,14 @@
   "author": "sdras",
   "scripts": {
     "start": "node index.js",
-    "test": "eslint index.js"
+    "lint": "eslint index.js",
+    "test": "nyc mocha",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov -t $CODECOV_TOKEN"
   },
-  "dependencies": {},
+  "dependencies": {
+    "codecov": "^3.1.0",
+    "nyc": "^13.1.0"
+  },
   "devDependencies": {
     "eslint": "5.5.0"
   }
