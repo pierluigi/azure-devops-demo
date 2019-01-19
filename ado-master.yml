@@ -20,7 +20,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    echo 'Codecov token: $CODECOV_TOKEN'
+    echo 'Codecov token: $(CODECOV_TOKEN)'
     npm install
     npm run lint
     npm run test
