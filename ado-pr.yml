@@ -31,7 +31,7 @@ steps:
 
 - script: |
     npm run test
-    CODECOV_TOKEN=$CODECOVE_TOKEN npm run report-coverage
+    CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
   displayName: 'test and upload coverage'
 
 - task: ArchiveFiles@2
