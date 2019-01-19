@@ -25,15 +25,6 @@ steps:
     npm run test
   displayName: 'npm install and test'
 
-- script: |
-    echo $(System.PullRequest.IsFork)
-    echo $(System.PullRequest.PullRequestId)
-    echo $(System.PullRequest.PullRequestNumber)
-    echo $(System.PullRequest.SourceBranch)
-    echo $(System.PullRequest.SourceRepositoryURI)
-    echo $(System.PullRequest.TargetBranch)
-  displayName: 'test System logs'
-
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
