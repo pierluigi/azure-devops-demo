@@ -27,7 +27,7 @@ steps:
   displayName: 'npm install, test, and lint'
 
 - script: |
-    SHORT_COMMIT=`echo $(Build.SourceVersion)| cut -c1-8`
+    SHORT_COMMIT=`echo $(Build.SourceVersion)| cut -c1-7`
     echo $SHORT_COMMIT > $(System.DefaultWorkingDirectory)/deploy.sha
   displayName: 'store commit SHA in file'
 
