@@ -34,6 +34,11 @@ steps:
     CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
   displayName: 'test and upload coverage'
 
+- script: |
+    SHORT_COMMIT=`echo $(Build.SourceVersion)| cut -c1-8`
+    echo $SHORT_COMMIT > $(Build.ArtifactStagingDirectory)/deploy.sha
+  displayName: 'store commit SHA in file'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
