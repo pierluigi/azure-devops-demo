@@ -1,5 +1,6 @@
-# azure-devops-demo
-Basic Node App built with Azure DevOps for demos
+# GitHub For Teams Demo Repository
+
+Basic Node App built with Azure DevOps for showcasing the GitHub Flow.
 
 # Codecov 
 
