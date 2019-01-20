@@ -13,6 +13,11 @@ var server = http.createServer(function(request, response) {
     `Server time: ${new Date(Date.now()).toLocaleString()}` + "\n\n"
   );
 
+  response.write(`FILES: \n\n`);
+  fs.readdirSync("./").forEach(file => {
+    response.write(`${file}\n\n`);
+  });
+
   if (sha.length && process.env.NODE_ENV !== "production") {
     response.write(`Deployed SHA: ${sha}`);
   }
