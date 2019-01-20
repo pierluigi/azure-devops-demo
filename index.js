@@ -18,7 +18,7 @@ var server = http.createServer(function(request, response) {
     response.write(`${file}\n\n`);
   });
 
-  if (sha.length && process.env.NODE_ENV !== "production") {
+  if (sha.length) {
     response.write(`Deployed SHA: ${sha}`);
   }
 
