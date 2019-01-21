@@ -7,7 +7,7 @@
   "author": "sdras",
   "scripts": {
     "start": "node index.js",
-    "lint": "eslint index.js",
+    "lint": "eslint */**.js",
     "test": "nyc mocha",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
