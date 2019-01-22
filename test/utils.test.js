@@ -41,6 +41,6 @@ describe('Utils', function () {
     it('returns empty string on missing argument', function () {
       assert.equal(utils.makeHeading(), '');
     })
-    */
+ 
   })
 });
