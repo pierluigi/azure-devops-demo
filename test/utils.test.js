@@ -25,4 +25,22 @@ describe('Utils', function () {
       }, Error);
     });
   });
+
+  describe('makeHeading', function () {
+
+    /*
+    it('wraps the string in a H1', function () {
+      assert.equal(utils.makeHeading('Title'), '<h1>Title</h1>');
+    })
+
+    it('trims any excess padding', function () {
+      const out = utils.makeHeading(' Title with padding   ');
+      assert.equal(out, '<h1>Title with padding</h1>');
+    })
+
+    it('returns empty string on missing argument', function () {
+      assert.equal(utils.makeHeading(), '');
+    })
+    */
+  })
 });
