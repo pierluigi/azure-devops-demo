@@ -1,0 +1,39 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  branches:
+    include:
+    - master
+
+pr: none
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run lint
+    npm test
+    CODECOV_TOKEN=$(CODECOV_TOKEN) npm run report-coverage
+  displayName: 'npm install, test, and lint'
+
+- script: |
+    SHORT_COMMIT=`echo $(Build.SourceVersion)| cut -c1-7`
+    echo $SHORT_COMMIT > $(System.DefaultWorkingDirectory)/deploy.sha
+  displayName: 'store commit SHA in file'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
