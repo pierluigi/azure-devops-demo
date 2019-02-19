@@ -13,7 +13,7 @@ Build status for `master`
 [![Build Status](https://dev.azure.com/pierluigi-github/GitHub%20Azure%20DevOps%20Demos/_apis/build/status/Master?branchName=master)](https://dev.azure.com/pierluigi-github/GitHub%20Azure%20DevOps%20Demos/_build/latest?definitionId=6?branchName=master)
 
 # Snyk Vulnerability Report
- [![Known Vulnerabilities](https://snyk.io/test/github/pierluigi/azure-devops-demo/badge.svg)](https://snyk.io/test/github/pierluigi/azure-devops-demo) 
+ [![Known Vulnerabilities](https://snyk.io/test/github/yuichielectric/azure-devops-demo/badge.svg)](https://snyk.io/test/github/yuichielectric/azure-devops-demo) 
 
 # Deployment slots
 
