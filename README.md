@@ -20,6 +20,6 @@ Build status for `master`
 
 | Environment | URL |
 | ----------- | --- | 
-| Production (via manual approval) | https://pierluigi.azurewebsites.net |
+| Production (via manual approval) | https://yuichielectric-azure.azurewebsites.net |
 | Preview (CD merge) | https://pierluigi-preview.azurewebsites.net |
 | Staging (CD for PRs) | https://pierluigi-staging.azurewebsites.net |
