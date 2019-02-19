@@ -2,5 +2,5 @@
 # precedence. When someone opens a pull request that only
 # modifies JS files, only @js-owner and not the global
 # owner(s) will be requested for a review.
-package.json    @pjawesome
-package-lock.json    @pjawesome
+package.json    @yuichielectric-demo
+package-lock.json    @yuichielectric-demo
