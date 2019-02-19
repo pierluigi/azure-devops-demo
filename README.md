@@ -5,7 +5,7 @@ Basic Node App built with Azure DevOps for showcasing the GitHub Flow.
 # Codecov 
 
 Code Coverage on `master`
-[![codecov](https://codecov.io/gh/pierluigi/azure-devops-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/pierluigi/azure-devops-demo)
+[![codecov](https://codecov.io/gh/yuichielectric/azure-devops-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/yuichielectric/azure-devops-demo)
 
 # Azure DevOps Pipelines
 
