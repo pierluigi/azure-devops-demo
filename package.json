@@ -12,6 +12,7 @@
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
+    "applicationinsights": "^1.1.0",
     "codecov": "^3.1.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0"

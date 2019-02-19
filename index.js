@@ -1,3 +1,7 @@
+const appInsights = require("applicationinsights")
+appInsights.setup("5aef94b2-4b8c-4832-a5f0-815d1732f063")
+appInsights.start()
+
 var http = require('http');
 var utils = require('./lib/utils');
 var fs = require('fs');
