@@ -6,7 +6,7 @@ var sha = fs.readFileSync('./deploy.sha', 'utf8').trim();
 
 var server = http.createServer(function (request, response) {
   response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-  const msg = utils.greetings('Friends');
+  const msg = utils.greetings('World');
   response.write(`${msg}\n\n`);
   response.write(`Server time: ${new Date(Date.now()).toLocaleString()}\n\n`);
 
