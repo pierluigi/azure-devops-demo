@@ -1,0 +1,46 @@
+diff --git a/index.js b/index.js
+index abd7b17..952f844 100644
+--- a/index.js
++++ b/index.js
+@@ -6,7 +6,7 @@ var sha = fs.readFileSync('./deploy.sha', 'utf8').trim();
+ 
+ var server = http.createServer(function (request, response) {
+   response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+-  const msg = utils.greetings('World');
++  const msg = utils.greetings('Friends');
+   response.write(`${msg}\n\n`);
+   response.write(`Server time: ${new Date(Date.now()).toLocaleString()}\n\n`);
+ 
+diff --git a/package.json b/package.json
+index c6d5424..723a3f8 100644
+--- a/package.json
++++ b/package.json
+@@ -15,7 +15,7 @@
+     "codecov": "^3.1.0",
+     "mocha": "^5.2.0",
+     "nyc": "^13.1.0",
+-    "request": "^2.46.0"
++    "request": "2.46.0"
+   },
+   "devDependencies": {
+     "eslint": "5.5.0"
+diff --git a/test/utils.test.js b/test/utils.test.js
+index 1056868..1ccc99e 100644
+--- a/test/utils.test.js
++++ b/test/utils.test.js
+@@ -28,7 +28,6 @@ describe('Utils', function () {
+ 
+   describe('makeHeading', function () {
+ 
+-    /*
+     it('wraps the string in a H1', function () {
+       assert.equal(utils.makeHeading('Title'), '<h1>Title</h1>');
+     })
+@@ -41,6 +40,6 @@ describe('Utils', function () {
+     it('returns empty string on missing argument', function () {
+       assert.equal(utils.makeHeading(), '');
+     })
+-    */
++
+   })
+ });
