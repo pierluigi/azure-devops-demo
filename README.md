@@ -48,3 +48,7 @@ Build status for `master`
 | Production (via manual approval) | https://pierluigi.azurewebsites.net |
 | Preview (CD merge) | https://pierluigi-preview.azurewebsites.net |
 | Staging (CD for PRs) | https://pierluigi-staging.azurewebsites.net |
+
+
+# Notes
+All is great here.
