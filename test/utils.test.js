@@ -27,7 +27,7 @@ describe('Utils', function () {
   });
 
   describe('makeHeading', function () {
-    /*
+
     it('wraps the string in a H1', function () {
       assert.equal(utils.makeHeading('Title'), '<h1>Title</h1>');
     })
@@ -40,6 +40,6 @@ describe('Utils', function () {
     it('returns empty string on missing argument', function () {
       assert.equal(utils.makeHeading(), '');
     })
-    */
+
   })
 });
