@@ -9,15 +9,19 @@
     "start": "node index.js",
     "lint": "eslint */**.js",
     "test": "nyc mocha",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "codecov": "^3.1.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
-    "request": "^2.46.0"
+    "request": "^2.46.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "5.5.0"
-  }
+  },
+  "snyk": true
 }
